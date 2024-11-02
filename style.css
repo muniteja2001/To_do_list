@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./bear.jpg); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.2), 0 -4px 10px rgba(0, 0, 255, 0.2);
+    text-align: center;
+}
+
+/* Header */
+.container h1 {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container h1 img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Form */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#text {
+    width: 70%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#plus {
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 8px;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#plus:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Task Container */
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.task-container:hover {
+    transform: scale(1.02);
+}
+
+.task-text {
+    font-size: 16px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Task Buttons */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.task-buttons button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.task-buttons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    #text {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #plus {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .task-text {
+        font-size: 14px;
+    }
+
+    .task-buttons img {
+        width: 20px;
+        height: 20px;
+    }
+}
